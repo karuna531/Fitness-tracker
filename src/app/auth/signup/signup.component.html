@@ -1,0 +1,66 @@
+<div class="container">
+  <section class="signup">
+    <div class="heading">
+      <h1>दर्ता फारम</h1>
+  </div>
+    <form [formGroup]="SignupForm" (ngSubmit)="onSubmit()" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="5px">
+      <div class="fieldContainer">
+        <mat-form-field appearance="outline">
+          <mat-label>First name</mat-label>
+          <input matInput type="text" formControlName="firstName" required>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Last name</mat-label>
+          <input matInput type="text" formControlName="lastName" required>
+        </mat-form-field>
+      </div>
+      <div class="fieldContainer">
+        <mat-form-field appearance="outline">
+          <mat-label>Phone </mat-label>
+          <input matInput type="text" formControlName="phone" required>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput type="email" formControlName="email" required>
+          <mat-error *ngIf="SignupForm.get('email')?.invalid">{{ getErrorMessage() }}</mat-error>
+        </mat-form-field>
+        
+      </div>
+      <div class="fieldContainer">
+        <mat-form-field appearance="outline">
+  
+          <mat-label>password </mat-label>
+          <input matInput type="password" #pwInput maxlength="10" formControlName="password">
+          <mat-hint align="end">{{pwInput.value.length}}/10</mat-hint>
+          <mat-error>Has to be at least 6 character long</mat-error>
+        </mat-form-field>
+  
+        <mat-form-field appearance="outline">
+          <mat-label>Choose a Birth date</mat-label>
+          <input matInput [matDatepicker]="picker" formControlName="dob" [max]="maxDate" required>
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+  
+      </div>
+      <div class="fieldContainer">
+        <mat-radio-group aria-label="Select Gender" formControlName="gender"  color="primary" required>
+          <label for="gender" class="genderHeading">Select Gender:</label>
+          <mat-radio-button value="male">Male </mat-radio-button>
+          <mat-radio-button value="female">Female</mat-radio-button>
+          <mat-radio-button value="others">Others</mat-radio-button>
+  
+        </mat-radio-group>
+      </div>
+      <div>
+        <mat-checkbox formControlName="agree" required  color="primary">
+          Agree To terms and Conditions
+        </mat-checkbox>
+      </div>
+      <button mat-raised-button color="primary" type="submit" [disabled]="SignupForm.invalid">Submit</button>
+  
+  
+    </form>
+  </section>
+</div>

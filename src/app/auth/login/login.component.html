@@ -1,0 +1,25 @@
+<div class="container">
+    <section class="signup">
+      <div class="heading">
+        <h1>Sign In Form</h1>
+    </div>
+      <form [formGroup]="LoginForm" (ngSubmit)="onSubmit()" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="5px">
+            <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput type="email" formControlName="email" required>
+            </mat-form-field>
+
+            
+            <mat-form-field appearance="outline">
+    
+                <mat-label>password </mat-label>
+                <input matInput type="password" #pwInput maxlength="10" formControlName="password">
+                <mat-hint align="end">{{pwInput.value.length}}/10</mat-hint>
+                <mat-error>Has to be at least 6 character long</mat-error>
+              </mat-form-field>
+        <button mat-raised-button color="primary" type="submit" >Submit</button>
+    
+    
+      </form>
+    </section>
+  </div>

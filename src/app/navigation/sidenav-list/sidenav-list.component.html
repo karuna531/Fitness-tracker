@@ -1,0 +1,23 @@
+<mat-nav-list>
+    <a mat-list-item routerLink="/signup" (click)="onSidenavListClick()"> <!--Sidenav is local reference as: #sidenav-->
+        <mat-icon>face</mat-icon>
+        <span class="nav-caption">Signup</span>
+    </a>
+    <a  mat-list-item  routerLink="/login" (click)="onSidenavListClick()">
+        <mat-icon>input</mat-icon>
+        <span class="nav-caption">login</span></a>
+    <a  mat-list-item routerLink="/training" (click)="onSidenavListClick()">
+        <mat-icon>fitness_center</mat-icon>
+        <span class="nav-caption">Training</span>
+    </a>  
+    <a  mat-list-item (click)="onSidenavListClick()"  >
+        <mat-icon>eject</mat-icon>
+        <span class="nav-caption">Logout</span>
+    </a>  
+    <!-- <mat-list-item >
+        <button mat-icon-button class="button-logout">
+            <mat-icon>eject</mat-icon>
+            <span  class="nav-caption">Logout</span>
+        </button>
+    </mat-list-item>  -->
+</mat-nav-list>
