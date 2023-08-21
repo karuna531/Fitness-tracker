@@ -1,6 +1,6 @@
 {
   "users": [
-    {},
+   
     {
       "id": "qydupu",
       "name": "Britanni Mullen",
@@ -24,6 +24,61 @@
       "role": "admin",
       "isActive": true,
       "agree": true
+    },
+    {
+      "id": "zorehug",
+      "name": "Teagan Farrell",
+      "email": "qokyf@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "phone": "+1 (824) 909-4716",
+      "gender": "others",
+      "dob": "2015-12-09T18:15:00.000Z",
+      "role": "admin",
+      "isActive": false,
+      "agree": true
+    },
+    {
+      "id": "somyg",
+      "name": "Belle Lara",
+      "email": "xyqakofec@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "phone": "+1 (422) 555-8232",
+      "gender": "male",
+      "dob": "1995-06-27T18:15:00.000Z",
+      "role": "admin",
+      "isActive": false,
+      "agree": true
+    },
+    {
+      "id": "sacaxibewe",
+      "name": "Ava Blankenship",
+      "email": "zijyby@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "phone": "+1 (985) 734-7895",
+      "gender": "others",
+      "dob": "1990-12-14T18:15:00.000Z",
+      "role": "admin",
+      "isActive": false,
+      "agree": true
     }
+    
+  ],
+  "role": [
+    {
+      "code":"staff",
+      "name":"staff"
+
+    },
+    {
+      "code":"hr",
+      "name":"Hr"
+
+    },
+    {
+      "code":"manager",
+      "name":"Manager"
+
+    }
+
   ]
 }

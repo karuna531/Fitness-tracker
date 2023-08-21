@@ -28,7 +28,7 @@ if(this.LoginForm.valid){
     if(this.userData.password === this.LoginForm.value.password){
       if(this.userData.isActive){
         sessionStorage.setItem('username', this.userData.id)
-        sessionStorage.setItem('username', this.userData.role)
+        sessionStorage.setItem('role', this.userData.role)
         this.router.navigate([''])
       }
       else{

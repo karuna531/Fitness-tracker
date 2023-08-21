@@ -25,6 +25,7 @@ to use toastr import it in appmodule.ts  and then add in angular.json style
     login lai pani banaune
   }
  ]
+ # to run json server :: npm run json-run 
 
 # Services API and httpclient and validation
 register.ts
