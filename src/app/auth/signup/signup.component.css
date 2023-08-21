@@ -1,23 +1,16 @@
-.fieldContainer{
-  display:flex;
-  gap:20px;
-}
+
 .genderHeading{
   font-size:14px;
   font-weight:bold;
 }
+mat-card {
+  width: 53%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 5%;;
 
+}
 /* .signup {
-  background-color: #ffffff;
-  border-radius: 10px;
-  position:relative;
-  top:20%;
-  left:20%;
-  box-shadow: 2px 2px 3px rgba(0.6, 0.7, 0.6, 0.3);
-  padding: 20px;
-  width:60%;
-} */
-.signup {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,9 +23,6 @@
   height: auto;
   padding: 20px;
   box-shadow: 0px 0px 6px rgba(52, 51, 51, 0.2);
-}
+} */
 
-.form-field {
-  width: 100%;
-  margin-bottom: 10px;
-}
+

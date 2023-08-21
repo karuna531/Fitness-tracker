@@ -1,4 +1,5 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -7,8 +8,14 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   @Output() sidenavToggle = new EventEmitter<void>();
+  isAuth!:boolean;
   constructor(){}
   ngOnInit(){
+    // this.authSubscription = this.authService.authChange.subscribe(authStatus =>{
+    //   this.isAuth = authStatus;
+    //   authSubscription:Subscription
+
+    // })
     
   }
   
