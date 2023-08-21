@@ -16,6 +16,11 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { HeaderComponent } from './navigation/header/header.component';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 import { StopTrainingComponent } from './training/current-training/stop-training.component';
+import { ToastrModule } from 'ngx-toastr';
+import{HttpClientModule} from '@angular/common/http';
+import { UserListingComponent } from './user-listing/user-listing.component';
+import { UpdatePopupComponent } from './update-popup/update-popup.component'
+
 
 
 @NgModule({
@@ -30,7 +35,9 @@ import { StopTrainingComponent } from './training/current-training/stop-training
     WelcomeComponent,
     HeaderComponent,
     SidenavListComponent,
-    StopTrainingComponent
+    StopTrainingComponent,
+    UserListingComponent,
+    UpdatePopupComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +46,10 @@ import { StopTrainingComponent } from './training/current-training/stop-training
     MaterialModule,
     FlexLayoutModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ToastrModule.forRoot(),
+    HttpClientModule,
+
 
   ],
   providers: [],

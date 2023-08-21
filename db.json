@@ -1,0 +1,29 @@
+{
+  "users": [
+    {},
+    {
+      "id": "qydupu",
+      "name": "Britanni Mullen",
+      "email": "paqawynu@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "phone": "+1 (796) 832-6943",
+      "gender": "female",
+      "dob": "2008-06-08T18:15:00.000Z",
+      "role": "admin",
+      "isActive": true,
+      "agree": true
+    },
+    {
+      "id": "Karuna531",
+      "name": "Karuna",
+      "email": "karunapandey125@gmail.com",
+      "password": "Karunapk@30",
+      "phone": "9856061292",
+      "gender": "female",
+      "dob": "2023-08-15T18:15:00.000Z",
+      "role": "admin",
+      "isActive": true,
+      "agree": true
+    }
+  ]
+}

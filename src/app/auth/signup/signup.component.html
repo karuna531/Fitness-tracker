@@ -1,66 +1,66 @@
-<div class="container">
-  <section class="signup">
-    <div class="heading">
-      <h1>दर्ता फारम</h1>
-  </div>
-    <form [formGroup]="SignupForm" (ngSubmit)="onSubmit()" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="5px">
-      <div class="fieldContainer">
-        <mat-form-field appearance="outline">
-          <mat-label>First name</mat-label>
-          <input matInput type="text" formControlName="firstName" required>
+<mat-card>
+  <mat-card-header>
+    <h2>User Registration</h2>
+  </mat-card-header>
+  <mat-card-content>
+    <form [formGroup]="SignupForm" (ngSubmit)="onSubmit()">
+      <div fxLayout.gt-sm="row" fxLayout="column" fxlayoutAlign="center center" fxLayoutGap="10px">
+        <mat-form-field>
+          <mat-label>user name</mat-label>
+          <input matInput type="text" formControlName="id" autocomplete="off">
         </mat-form-field>
-        <mat-form-field appearance="outline">
-          <mat-label>Last name</mat-label>
-          <input matInput type="text" formControlName="lastName" required>
+        <mat-form-field>
+          <mat-label>Name</mat-label>
+          <input matInput type="text" formControlName="name" autocomplete="off">
         </mat-form-field>
       </div>
-      <div class="fieldContainer">
-        <mat-form-field appearance="outline">
+      <div fxLayout.gt-sm="row" fxLayout="column" fxlayoutAlign="center center" fxLayoutGap="10px">
+
+        <mat-form-field>
           <mat-label>Phone </mat-label>
-          <input matInput type="text" formControlName="phone" required>
+          <input matInput type="text" formControlName="phone" autocomplete="off">
         </mat-form-field>
-        <mat-form-field appearance="outline">
+        <mat-form-field>
           <mat-label>Email</mat-label>
-          <input matInput type="email" formControlName="email" required>
-          <mat-error *ngIf="SignupForm.get('email')?.invalid">{{ getErrorMessage() }}</mat-error>
+          <input matInput type="email" formControlName="email" autocomplete="off">
         </mat-form-field>
-        
       </div>
-      <div class="fieldContainer">
-        <mat-form-field appearance="outline">
-  
+      <div fxLayout.gt-sm="row" fxLayout="column" fxlayoutAlign="center center" fxLayoutGap="10px">
+        <mat-form-field>
           <mat-label>password </mat-label>
-          <input matInput type="password" #pwInput maxlength="10" formControlName="password">
-          <mat-hint align="end">{{pwInput.value.length}}/10</mat-hint>
-          <mat-error>Has to be at least 6 character long</mat-error>
+          <input matInput type="password" #pwInput  formControlName="password">
+          <mat-hint align="end">{{pwInput.value.length}}/15</mat-hint>
         </mat-form-field>
-  
-        <mat-form-field appearance="outline">
+
+        <mat-form-field>
           <mat-label>Choose a Birth date</mat-label>
           <input matInput [matDatepicker]="picker" formControlName="dob" [max]="maxDate" required>
           <mat-hint>MM/DD/YYYY</mat-hint>
           <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
           <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
-  
       </div>
-      <div class="fieldContainer">
-        <mat-radio-group aria-label="Select Gender" formControlName="gender"  color="primary" required>
-          <label for="gender" class="genderHeading">Select Gender:</label>
-          <mat-radio-button value="male">Male </mat-radio-button>
-          <mat-radio-button value="female">Female</mat-radio-button>
-          <mat-radio-button value="others">Others</mat-radio-button>
-  
-        </mat-radio-group>
-      </div>
-      <div>
-        <mat-checkbox formControlName="agree" required  color="primary">
-          Agree To terms and Conditions
-        </mat-checkbox>
-      </div>
-      <button mat-raised-button color="primary" type="submit" [disabled]="SignupForm.invalid">Submit</button>
-  
-  
-    </form>
-  </section>
+
+      <mat-radio-group aria-label="Select Gender" formControlName="gender" color="primary" fxLayout.gt-xs="row" fxLayout="column" required>
+        <label for="gender" class="genderHeading">Select Gender:</label>
+        <mat-radio-button value="male">Male </mat-radio-button>
+        <mat-radio-button value="female">Female</mat-radio-button>
+        <mat-radio-button value="others">Others</mat-radio-button>
+
+      </mat-radio-group>
+<div>
+  <mat-checkbox formControlName="agree" required color="primary">
+    Agree To terms and Conditions
+  </mat-checkbox>
 </div>
+      <div>
+        <!-- <button mat-raised-button color="primary" type="submit" [disabled]="SignupForm.invalid">Submit</button> -->
+        <button mat-raised-button color="primary" type="submit" >Submit</button>
+
+        <button mat-raised-button color="warn" routerLink="/login">Login</button>
+
+      </div>
+
+    </form>
+  </mat-card-content>
+</mat-card>
