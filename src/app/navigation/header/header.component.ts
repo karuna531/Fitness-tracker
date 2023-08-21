@@ -1,4 +1,5 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, DoCheck } from '@angular/core';
+import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -6,16 +7,12 @@ import { Subscription } from 'rxjs';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, DoCheck {
   @Output() sidenavToggle = new EventEmitter<void>();
   isAuth!:boolean;
-  constructor(){}
+  constructor(private router:Router){}
   ngOnInit(){
-    // this.authSubscription = this.authService.authChange.subscribe(authStatus =>{
-    //   this.isAuth = authStatus;
-    //   authSubscription:Subscription
-
-    // })
+    
     
   }
   
@@ -23,4 +20,16 @@ export class HeaderComponent implements OnInit {
     this.sidenavToggle.emit();
 
   }
+  ismenuRequired=false;
+ngDoCheck(): void {
+  let currentUrl = this.router.url;
+  if(currentUrl == '/login' || currentUrl == '/signup'){
+    this.ismenuRequired = false;
+  }
+  else{
+    this.ismenuRequired = true;
+
+  }
+
+}  
 }
